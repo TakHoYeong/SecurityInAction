@@ -1,1 +1,13 @@
-
+spring:
+  datasource:
+    url: jdbc:mariadb:taco:spring
+    username: root
+    password: 1234
+  sql:
+    init:
+      mode: always
+  ldap:
+    embedded:
+      ldif: classpath:server.ldif
+      base-dn: springframework,dc=org
+      port: 33389
